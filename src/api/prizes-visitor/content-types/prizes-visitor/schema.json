@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prizes_visitors",
+  "info": {
+    "singularName": "prizes-visitor",
+    "pluralName": "prizes-visitors",
+    "displayName": "PrizesVisitor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "g_zexhibitor_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::g-zexhibitor-registration.g-zexhibitor-registration",
+      "mappedBy": "prizesVisitorId"
+    }
+  }
+}

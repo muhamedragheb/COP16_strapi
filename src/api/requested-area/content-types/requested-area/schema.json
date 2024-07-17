@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requested_areas",
+  "info": {
+    "singularName": "requested-area",
+    "pluralName": "requested-areas",
+    "displayName": "RequestedArea",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "b_zexhibitor_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::b-zexhibitor-registration.b-zexhibitor-registration",
+      "mappedBy": "requested_area"
+    },
+    "g_zexhibitor_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::g-zexhibitor-registration.g-zexhibitor-registration",
+      "mappedBy": "RequestedAreaId"
+    }
+  }
+}

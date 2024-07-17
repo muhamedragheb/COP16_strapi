@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entity_classifications",
+  "info": {
+    "singularName": "entity-classification",
+    "pluralName": "entity-classifications",
+    "displayName": "EntityClassification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "g_zentity_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::g-zentity-registration.g-zentity-registration",
+      "mappedBy": "entityClassificationId"
+    },
+    "g_zexhibitor_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::g-zexhibitor-registration.g-zexhibitor-registration",
+      "mappedBy": "entityClassificationId"
+    }
+  }
+}

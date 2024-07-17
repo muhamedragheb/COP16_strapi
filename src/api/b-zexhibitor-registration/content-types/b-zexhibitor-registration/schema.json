@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "b_zexhibitor_registrations",
+  "info": {
+    "singularName": "b-zexhibitor-registration",
+    "pluralName": "b-zexhibitor-registrations",
+    "displayName": "BZexhibitorRegistration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "delegationName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "delegationRepresentative": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "phoneNumber": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "email": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "requested_area": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::requested-area.requested-area",
+      "inversedBy": "b_zexhibitor_registrations"
+    }
+  }
+}

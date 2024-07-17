@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "g_zindividual_registrations",
+  "info": {
+    "singularName": "g-zindividual-registration",
+    "pluralName": "g-zindividual-registrations",
+    "displayName": "GZindividualRegistration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "fullName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "phoneNumber": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "email": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "jobTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "organizationName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "titleId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::title.title",
+      "inversedBy": "g_zindividual_registrations"
+    },
+    "qualificationId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::qualification.qualification",
+      "inversedBy": "g_zindividual_registrations"
+    },
+    "organizationCategoryId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization-category.organization-category",
+      "inversedBy": "g_zindividual_registrations"
+    },
+    "residenceId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::residence.residence",
+      "inversedBy": "g_zindividual_registrations"
+    },
+    "nationalityId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nationality.nationality",
+      "inversedBy": "g_zindividual_registrations"
+    }
+  }
+}

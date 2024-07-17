@@ -1,0 +1,263 @@
+{
+  "kind": "collectionType",
+  "collectionName": "g_zexhibitor_registrations",
+  "info": {
+    "singularName": "g-zexhibitor-registration",
+    "pluralName": "g-zexhibitor-registrations",
+    "displayName": "GZexhibitorRegistration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "entityName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "headQuarterCity": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "manyBranches": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "logoFile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "BriefAbout": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "numStanding": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "entityCEO": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "linkedIn": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "twitter": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "facebook": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "instagram": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "youtube": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "entityOfficialWebsite": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "entityOfficialEmail": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "focalPointName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "focalPointTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "focalPointMobile": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "focalPointEmail": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "specificRequests": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "entityClassificationId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::entity-classification.entity-classification",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "sectorFieldId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sector-field.sector-field",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "manyEmployeeId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::many-employee.many-employee",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "levelRepresentationId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::level-representation.level-representation",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "planningvisitorsSpaceId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::planningvisitors-space.planningvisitors-space",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "prizesVisitorId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::prizes-visitor.prizes-visitor",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "partnershipAgreementId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::partnership-agreement.partnership-agreement",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "attachedFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "RequestedAreaId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::requested-area.requested-area",
+      "inversedBy": "g_zexhibitor_registrations"
+    },
+    "initiativesObjectivesId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lkp-answer.lkp-answer",
+      "inversedBy": "initiativesObjectives"
+    },
+    "partnershipsObjectivesId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lkp-answer.lkp-answer",
+      "inversedBy": "partnershipsObjectives"
+    },
+    "attendedConferencesId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lkp-answer.lkp-answer",
+      "inversedBy": "attendedConferences"
+    },
+    "nominatedInstitutionsId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lkp-answer.lkp-answer",
+      "inversedBy": "nominatedInstitutions"
+    }
+  }
+}
